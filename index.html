@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Elisa</title>
+<style>
+  body {
+    margin: 0;
+    background: #f2f2f7;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  header {
+    height: 44px;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    font-weight: 600;
+  }
+
+  main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  button {
+    height: 90px;
+    border: none;
+    border-radius: 16px;
+    background: white;
+    font-size: 24px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+
+  footer {
+    height: 60px;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <span>Elisa</span>
+  <span id="hora">00:00</span>
+  <span>100%</span>
+</header>
+
+<main>
+  <button onclick="abrir('Música')">🎵</button>
+  <button onclick="abrir('Config')">⚙️</button>
+  <button onclick="abrir('Notas')">📝</button>
+  <button onclick="abrir('IA')">🤖</button>
+  <button onclick="abrir('Web')">🌐</button>
+  <button onclick="abrir('Mais')">➕</button>
+</main>
+
+<footer>
+  <button>🏠</button>
+  <button>🔍</button>
+  <button>⚙️</button>
+</footer>
+
+<script>
+  function atualizarHora() {
+    const h = new Date();
+    document.getElementById("hora").innerText =
+      h.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  }
+
+  setInterval(atualizarHora, 1000);
+  atualizarHora();
+
+  function abrir(nome) {
+    alert("Abrindo: " + nome);
+  }
+</script>
+
+<script src="app.js"></script>
+</body>
+</html>

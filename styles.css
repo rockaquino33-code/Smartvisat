@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
+  <title>Elisa — Simulação PWA</title>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#222222" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-icon" href="/assets/icons/icon-192.png" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="statusbar">
+      <div class="left">Elisa</div>
+      <div class="center" id="clock">--:--</div>
+      <div class="right">🔋 100%</div>
+    </header>
+
+    <main class="app-shell" id="app-shell">
+      <nav class="home-grid">
+        <button class="app-card"><img src="/assets/icons/icon-192.png" /><span>Música</span></button>
+        <button class="app-card"><img src="/assets/icons/icon-192.png" /><span>Config</span></button>
+        <button class="app-card"><img src="/assets/icons/icon-192.png" /><span>Notas</span></button>
+      </nav>
+
+      <section class="content">
+        <h1>Tela Principal do Aplicativo</h1>
+        <p>Instale a PWA usando "Adicionar à Tela de Início".</p>
+        <div class="card">
+          <h2>Teste Offline</h2>
+          <p>Se <code>sw.js</code> e os ativos estiverem corretos, funciona offline.</p>
+          <button id="test-btn" class="btn">Botão de Teste</button>
+        </div>
+      </section>
+    </main>
+
+    <div class="dock">
+      <button class="dock-btn">🏠</button>
+      <button class="dock-btn">🎵</button>
+      <button class="dock-btn">⚙️</button>
+    </div>
+
+    <div id="install-toast" class="install-toast" hidden>
+      <span>Instalar Elisa?</span>
+      <button id="install-yes">Instalar</button>
+      <button id="install-no">Fechar</button>
+    </div>
+  </div>
+
+  <script src="/main.js"></script>
+</body>
+</html>
