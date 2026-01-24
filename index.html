@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <title>Elisa OS</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Elisa" />
+
+  <!-- Apple Touch Icons -->
+  <link rel="apple-touch-icon" sizes="72x72" href="icons/icon-72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="icons/icon-96.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="icons/icon-167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="384x384" href="icons/icon-384.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="icons/icon-512.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- STATUS BAR -->
+    <header class="status-bar">
+      <span id="app-title">Elisa OS</span>
+    </header>
+
+    <!-- VIEW PRINCIPAL (JS CONTROLA TUDO AQUI) -->
+    <main id="view" class="main-view">
+      <h1>Bem-vindo ao Elisa</h1>
+      <p>Sistema em execução.</p>
+
+      <div id="modules"></div>
+    </main>
+
+    <!-- TAB BAR -->
+    <nav class="tab-bar">
+      <button data-view="home">Home</button>
+      <button data-view="apps">Apps</button>
+      <button data-view="ia">IA</button>
+      <button data-view="settings">Ajustes</button>
+    </nav>
+
+  </div>
+
+  <!-- SCRIPTS (ORDEM IMPORTA) -->
+  <script src="main.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
